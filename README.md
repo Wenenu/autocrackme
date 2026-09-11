@@ -63,8 +63,17 @@ face while you work.
 ## Importing your IDA comments
 
 `export` copies the database (so it never fights the IDA GUI for the file),
-opens the copy headlessly with `idat.exe -A -S<script>`, and writes every line
-comment, function comment and rename it finds into `notes.json`.
+opens the copy headlessly with `idat.exe -A -S<script>`, and writes the line
+comments, function comments and renames it finds into `notes.json`.
+
+Only *your* annotations are exported. IDA fills a database with its own
+material — argument and variable names derived from type information, canned
+instruction comments, switch and jump-table annotations, and library signature
+text — and all of it comes back through the same API calls as a real comment.
+`export` filters every one of those out, so opening a binary and saving it
+scores nothing. A couple of runtime names IDA applies cannot be told from a
+rename by any flag, so they slip through; they are negligible, and renaming a
+function or a global is what actually shows up in your score.
 
 **Save your database in IDA first (Ctrl+W).** The export reads what was last
 saved; if there is no `.i64`, it falls back to analysing the binary from scratch,
