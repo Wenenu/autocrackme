@@ -1,0 +1,27 @@
+# Local configuration (machine-specific toolchain paths)
+config.json
+
+# Generated challenges, exported notes, and the learning history
+challenges/
+history.json
+
+# IDA databases and their side files
+*.i64
+*.idb
+*.til
+*.nam
+*.id0
+*.id1
+*.id2
+
+# Build artefacts
+*.obj
+*.exe
+*.pdb
+ida_export.log
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
