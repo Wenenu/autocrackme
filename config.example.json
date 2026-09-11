@@ -1,0 +1,37 @@
+{
+  "challenges_dir": null,
+  "vcvars_path": null,
+  "ida_path": null,
+  "arch": "x64",
+  "optimize": true,
+  "ida_timeout_seconds": 300,
+  "antidebug": true,
+  "start_level": 1,
+  "skill_alpha": 0.35,
+  "expected_minutes_base": 20,
+  "expected_minutes_per_level": 15,
+  "weights": {
+    "solved": 0.35,
+    "technique": 0.25,
+    "understanding": 0.15,
+    "effort": 0.1,
+    "speed": 0.1,
+    "bypass": -0.15,
+    "hints": -0.1
+  },
+  "composer": {
+    "budget_base": 5.0,
+    "budget_skill": 28.0,
+    "max_layers": 3,
+    "novelty_weight": 3.0,
+    "reinforce_weight": 2.5,
+    "retire_weight": 0.25,
+    "weak_threshold": 0.35,
+    "strong_threshold": 0.7,
+    "bypass_weight_mult": 1.4,
+    "cooldown_mult": 0.35,
+    "recent_cooldown": 2,
+    "repeat_window": 6,
+    "compose_attempts": 12
+  }
+}
